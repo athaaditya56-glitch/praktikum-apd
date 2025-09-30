@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="flowchart-posstest-3"/>
+        <attribute name="authors" value=""/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-30 08:27:43 PM"/>
+        <attribute name="created" value="QUNFUjtMQVBUT1AtRENOVUdRNUw7MjAyNS0wOS0zMDswNDo1MzozMSBQTTsyNjUy"/>
+        <attribute name="edited" value="QUNFUjtMQVBUT1AtRENOVUdRNUw7MjAyNS0wOS0zMDswODoyNzo0MyBQTTszOzI3NzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="namaAkun, nimAkun, nama, nim" type="String" array="False" size=""/>
+            <declare name="pilihan" type="Integer" array="False" size=""/>
+            <declare name="biayaLangganan" type="Integer" array="False" size=""/>
+            <declare name="biayaAdmin, totalBayar" type="Real" array="False" size=""/>
+            <assign variable="namaAkun" expression="&quot;Aditya nur atha&quot;"/>
+            <assign variable="nimAkun" expression="&quot;2509106082&quot;"/>
+            <assign variable="biayaLangganan" expression="1500000"/>
+            <output expression="&quot;LOGIN DULU KAWAN&quot;" newline="True"/>
+            <output expression="&quot;masukkan Nama:&quot;" newline="True"/>
+            <input variable="nama"/>
+            <output expression="&quot;masukkan NIM:&quot;" newline="True"/>
+            <input variable="nim"/>
+            <if expression="nama = namaAkun AND nim = nimAkun">
+                <then>
+                    <output expression="&quot;PILIH LANGGANAN&quot;" newline="True"/>
+                    <output expression="&quot;1. Bronze (1% biaya admin)akses dasar ke lagu lagu populer&quot;" newline="True"/>
+                    <output expression="&quot;2. Silver (3% biaya admin)akses lagu premium dan playlist kustom&quot;" newline="True"/>
+                    <output expression="&quot;3. Gold (5% biaya admin)akses lagu premium,playlist kustom,dan mode offline&quot;" newline="True"/>
+                    <output expression="&quot;4. Platinum (7% biaya admin)akses semua fitur,playlist kustom,mode offline,dan konten eksklusif artis&quot;" newline="True"/>
+                    <input variable="pilihan"/>
+                    <if expression="pilihan = 1">
+                        <then>
+                            <assign variable="biayaAdmin" expression="biayaLangganan*1/100"/>
+                            <assign variable="totalBayar" expression="biayaLangganan+biayaAdmin"/>
+                            <output expression="&quot;pilihan langganan : Bronze&quot;" newline="True"/>
+                            <output expression="&quot;biaya langganan:Rp&quot; &amp; biayaLangganan" newline="True"/>
+                            <output expression="&quot;biaya admin(1%):Rp&quot; &amp; biayaAdmin" newline="True"/>
+                            <output expression="&quot;Total Bayar: Rp&quot; &amp; totalBayar" newline="True"/>
+                            <output expression="&quot;keuntungan : akses dasar ke lagu lagu populer&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="pilihan= 2">
+                                <then>
+                                    <assign variable="biayaAdmin" expression="biayaLangganan*3/100"/>
+                                    <assign variable="totalBayar" expression="biayaLangganan+biayaAdmin"/>
+                                    <output expression="&quot;pilihan langganan : Silver&quot;" newline="True"/>
+                                    <output expression="&quot;biaya langganan:Rp&quot; &amp; biayaLangganan" newline="True"/>
+                                    <output expression="&quot;biaya admin(3%):Rp&quot; &amp; biayaAdmin" newline="True"/>
+                                    <output expression="&quot;Total Bayar: Rp&quot; &amp; totalBayar" newline="True"/>
+                                    <output expression="&quot;keuntungan : akses lagu premium dan playlist kustom&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="pilihan= 3">
+                                        <then>
+                                            <assign variable="biayaAdmin" expression="biayaLangganan*5/100"/>
+                                            <assign variable="totalBayar" expression="biayaLangganan+biayaAdmin"/>
+                                            <output expression="&quot;pilihan langganan : Gold&quot;" newline="True"/>
+                                            <output expression="&quot;biaya langganan:Rp&quot; &amp; biayaLangganan" newline="True"/>
+                                            <output expression="&quot;biaya admin(5%):Rp&quot; &amp; biayaAdmin" newline="True"/>
+                                            <output expression="&quot;Total Bayar: Rp&quot; &amp; totalBayar" newline="True"/>
+                                            <output expression="&quot;keuntungan : akses lagu premium, playlist kustom dan mode offline&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="pilihan= 4">
+                                                <then>
+                                                    <assign variable="biayaAdmin" expression="biayaLangganan*7/100"/>
+                                                    <assign variable="totalBayar" expression="biayaLangganan+biayaAdmin"/>
+                                                    <output expression="&quot;pilihan langganan : Platinum&quot;" newline="True"/>
+                                                    <output expression="&quot;biaya langganan:Rp&quot; &amp; biayaLangganan" newline="True"/>
+                                                    <output expression="&quot;biaya admin(7%):Rp&quot; &amp; biayaAdmin" newline="True"/>
+                                                    <output expression="&quot;Total Bayar: Rp&quot; &amp; totalBayar" newline="True"/>
+                                                    <output expression="&quot;keuntungan : akses lagu premium, playlist kustom, mode offline dan konten eksklusif artis&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;pilihannya tidak ada bang!&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Login gagal! Nama atau NIM salah bang!.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
