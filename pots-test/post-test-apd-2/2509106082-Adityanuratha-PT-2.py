@@ -3,7 +3,7 @@ nama = input("Masukkan Nama Lengkap: ")
 nim = input("Masukkan NIM: ")
 harga = float(input("Masukkan harga menu makanan (Rp): "))
 
-# Data menu dan pajak (pakai dictionary agar tidak pakai if/else)
+# Data menu dan pajak
 menu_pajak = {
     "Pecel Lele": 5,
     "Mie Ayam": 8,
